@@ -1,0 +1,17 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(133, 133, 133);
+  border: 1px solid black;
+}
+
+.areaContent {
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.droppableArea {
+  flex: 1;
+  flex-direction: column;
+}
