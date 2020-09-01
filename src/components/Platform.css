@@ -1,5 +1,50 @@
 .platform {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50vh 50vh;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "corner urgent not-urgent"
+    "important do schedule"
+    "not-important delegate eliminate";
 }
+
+.corner {
+  grid-area: corner;
+}
+
+.urgent {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  grid-area: urgent;
+  text-align: center;
+}
+
+.not-urgent {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  grid-area: not-urgent;
+  text-align: center;
+}
+
+.important {
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-area: important;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.not-important {
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-area: not-important;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+

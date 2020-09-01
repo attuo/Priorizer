@@ -1,27 +1,46 @@
 .area {
+  grid-area: area;
   display: flex;
   flex-direction: column;
-  background-color: var(--area-color);
   border: 1px solid black;
   padding: 10px;
 }
 
-.areaTitle {
-  background-color: var(--area-title-color);
+.area-title {
   padding: 5px;
+  text-align: center;
 }
 
-.areaContent {
-  background-color: var(--area-content-color);
+.area-content {
   display: flex;
   padding: 5px;
   flex: 1;
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  margin: 10px;
+  margin-top: 10px;
 }
 
-.droppableArea {
+.area-droppable {
   height: 100%;
+}
+
+.do {
+  grid-area: do;
+  background-color: #fce5e3;
+}
+
+.schedule {
+  grid-area: schedule;
+  background-color: #ebefeb;
+}
+
+.delegate {
+  grid-area: delegate;
+  background-color: #fcf4eb;
+}
+
+.eliminate {
+  grid-area: eliminate;
+  background-color: #fff6e3;
 }
