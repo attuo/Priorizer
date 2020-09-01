@@ -1,17 +1,27 @@
 .area {
   display: flex;
   flex-direction: column;
-  background-color: rgb(133, 133, 133);
+  background-color: var(--area-color);
   border: 1px solid black;
+  padding: 10px;
+}
+
+.areaTitle {
+  background-color: var(--area-title-color);
+  padding: 5px;
 }
 
 .areaContent {
+  background-color: var(--area-content-color);
   display: flex;
+  padding: 5px;
+  flex: 1;
+  flex-direction: column;
   overflow-y: auto;
-  height: 100%;
+  overflow-x: hidden;
+  margin: 10px;
 }
 
 .droppableArea {
-  flex: 1;
-  flex-direction: column;
+  height: 100%;
 }
