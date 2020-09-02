@@ -40,8 +40,8 @@ function Platform() {
         <div className="urgent">Urgent</div>
         <div className="not-urgent">Not urgent</div>
         {areas}
-        <div className="important">Not important</div>
-        <div className="not-important">Important</div>
+        <div className="important">Important</div>
+        <div className="not-important">Not important</div>
       </DragDropContext>
     </div>
   )
