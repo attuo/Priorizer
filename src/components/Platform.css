@@ -1,16 +1,14 @@
 .platform {
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: 70px 350px 350px 350px;
+  grid-template-rows: 45px 350px 350px;
   grid-template-areas:
-    "corner         urgent    not-urgent"
-    "important      do        schedule"
-    "not-important  delegate  eliminate";
+    ".              urgent    not-urgent  ."
+    "important      do        schedule    done"
+    "not-important  delegate  eliminate   done";
+  grid-gap: 1px;
 }
 
-.corner {
-  grid-area: corner;
-}
 
 .urgent {
   font-size: 22px;

@@ -1,5 +1,4 @@
 .area {
-  grid-area: area;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -7,8 +6,15 @@
 }
 
 .area-title {
+  display: flex;
+  flex-direction: row;
   padding: 5px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-text {
+  
 }
 
 .area-content {
@@ -18,29 +24,35 @@
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-top: 10px;
 }
 
 .area-droppable {
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.do {
+.do-area {
   grid-area: do;
   background-color: #fce5e3;
 }
 
-.schedule {
+.schedule-area {
   grid-area: schedule;
   background-color: #ebefeb;
 }
 
-.delegate {
+.delegate-area {
   grid-area: delegate;
   background-color: #fcf4eb;
 }
 
-.eliminate {
+.eliminate-area {
   grid-area: eliminate;
   background-color: #fff6e3;
 }
+
+.done-area {
+  grid-area: done;
+}
+

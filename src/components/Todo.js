@@ -17,7 +17,7 @@ function Todo(props) {
             {...provided.dragHandleProps}
           >
             {data.text}
-            <button onClick={() => remove(areaKey, index)}>Remove</button>
+            <button onClick={() => remove(areaKey, index)}>X</button>
           </div>
       }
     </Draggable>

@@ -1,10 +1,12 @@
 .todo {
   background-color: var(--todo-area-color);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  height: 100px;
   border: 1px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
   text-align: center;
+  justify-content: space-between;
+  align-items: center;
 }
