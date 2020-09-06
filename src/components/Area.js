@@ -6,11 +6,11 @@ import Todo from './Todo';
 import './Area.css'
 
 function Area(props) {
-  const { data, areaKey, add } = props;
+  const { data, areaKey, add, remove } = props;
   const areaClassName = data.name.toLowerCase(); 
 
   const todos = data.items.map((item, index) =>
-    <Todo key={item.id} data={item} index={index} />
+    <Todo areaKey={areaKey} key={item.id} data={item} index={index} remove={remove} />
   );
 
   return (

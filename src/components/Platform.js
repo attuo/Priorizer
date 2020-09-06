@@ -46,8 +46,16 @@ function Platform() {
     setAreaList(newObj);
   }
 
+  const removeTodo = (key, index) => {
+    let area = areaList[key];
+    area.items.splice(index, 1);
+    // TODO: Need to change that only items array is set, not whole area object
+    const newObj = { ...areaList, [key]: area };
+    setAreaList(newObj);
+  }
+
   const areas = Object.entries(areaList).map(([areaKey, area], index) =>
-    <Area key={areaKey} areaKey={areaKey} data={area} add={addTodo} />
+    <Area key={areaKey} areaKey={areaKey} data={area} add={addTodo} remove={removeTodo} />
   );
 
   return (
