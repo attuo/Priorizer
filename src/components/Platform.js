@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 
-import { onDragEnd } from '../utils/drag'
+import { onDragEnd } from '../utils/drag';
+import { generateId } from '../utils/idgenerator';
 import Area from './Area';
 
 import './Platform.css';
+
+
+const createNewTodo = () => {
+  return { id: generateId(), text: "Test text"}
+}
 
 const areasFromBackend = 
 { 
   doArea: {
     name: "Do",
-    items: [ { id: "Item1", text: "Test1" }, { id: "Item2", text: "Test2" }, { id: "Item7", text: "Test7" }]
+    items: []
   },
   scheludeArea: {
     name: "Schedule",
-    items: [ { id: "Item3", text: "Test3" }, { id: "Item4", text: "Test4" }]
+    items: []
   },
   delegateArea: {
     name: "Delegate",
-    items: [ { id: "Item5", text: "Test5" }, { id: "Item6", text: "Test6" }]
+    items: [ createNewTodo() ]
   },
   eliminateArea: {
     name: "Eliminate",
@@ -26,11 +32,22 @@ const areasFromBackend =
   }
 }
 
+
+
 function Platform() {
   const [areaList, setAreaList] = useState(areasFromBackend);
 
+  const addTodo = (key) => {
+    const newTodo = createNewTodo();
+    let area = areaList[key];
+    area.items.push(newTodo);
+    // TODO: Need to change that only items array is set, not whole area object
+    const newObj = { ...areaList, [key]: area };
+    setAreaList(newObj);
+  }
+
   const areas = Object.entries(areaList).map(([areaKey, area], index) =>
-    <Area key={areaKey} areaKey={areaKey} data={area} />
+    <Area key={areaKey} areaKey={areaKey} data={area} add={addTodo} />
   );
 
   return (

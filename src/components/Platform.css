@@ -3,9 +3,9 @@
   grid-template-columns: auto 1fr 1fr;
   grid-template-rows: auto 1fr 1fr;
   grid-template-areas:
-    "corner urgent not-urgent"
-    "important do schedule"
-    "not-important delegate eliminate";
+    "corner         urgent    not-urgent"
+    "important      do        schedule"
+    "not-important  delegate  eliminate";
 }
 
 .corner {

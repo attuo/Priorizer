@@ -6,7 +6,7 @@ import Todo from './Todo';
 import './Area.css'
 
 function Area(props) {
-  const { data, areaKey } = props;
+  const { data, areaKey, add } = props;
   const areaClassName = data.name.toLowerCase(); 
 
   const todos = data.items.map((item, index) =>
@@ -17,15 +17,12 @@ function Area(props) {
     <div key={areaKey} className={"area " + areaClassName}>
       <div className={"area-title " + areaClassName}>
         <h2>{data.name}</h2>
+        <button onClick={() => add(areaKey)}>Add</button>
       </div>
       <div className={"area-content " + areaClassName}>
       <Droppable  droppableId={areaKey} key={areaKey}>
         { (provided, snapshot) => (
-          <div 
-            className="area-droppable"
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-          >
+          <div className="area-droppable" {...provided.droppableProps} ref={provided.innerRef}>
             {todos}
             {provided.placeholder}
           </div>
