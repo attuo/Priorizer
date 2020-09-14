@@ -1,0 +1,12 @@
+/* these make sure it can work in any text element */
+
+.inline-text {
+  width: 100%;
+}
+
+.text-input {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}

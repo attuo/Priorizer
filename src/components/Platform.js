@@ -58,6 +58,13 @@ function Platform() {
     setAreaList(newObj);
   }
 
+  const changeTodo = (key, index, text) => {
+    let area = areaList[key];
+    area.items[index].text = text;
+    const newObj = { ...areaList, [key]: area}
+    setAreaList(newObj);
+  }
+
   const areas = Object.entries(areaList).map(([areaKey, area], index) =>
     <Area key={areaKey} areaKey={areaKey} data={area} add={addTodo} remove={removeTodo} />
   );
@@ -69,16 +76,16 @@ function Platform() {
         <div className="urgent">Urgent</div>
         <div className="not-urgent">Not urgent</div>
         
-        <Area key={"doArea"} areaKey={"doArea"} data={areaList.doArea} add={addTodo} remove={removeTodo} />
-        <Area key={"scheduleArea"} areaKey={"scheduleArea"} data={areaList.scheduleArea} add={addTodo} remove={removeTodo} />
-        <Area key={"delegateArea"} areaKey={"delegateArea"} data={areaList.delegateArea} add={addTodo} remove={removeTodo} />
-        <Area key={"eliminateArea"} areaKey={"eliminateArea"} data={areaList.eliminateArea} add={addTodo} remove={removeTodo} />
+        <Area key={"doArea"} areaKey={"doArea"} data={areaList.doArea} add={addTodo} remove={removeTodo} change={changeTodo} />
+        <Area key={"scheduleArea"} areaKey={"scheduleArea"} data={areaList.scheduleArea} add={addTodo} remove={removeTodo} change={changeTodo} />
+        <Area key={"delegateArea"} areaKey={"delegateArea"} data={areaList.delegateArea} add={addTodo} remove={removeTodo} change={changeTodo} />
+        <Area key={"eliminateArea"} areaKey={"eliminateArea"} data={areaList.eliminateArea} add={addTodo} remove={removeTodo} change={changeTodo} />
 
         <div className="important">Important</div>
         <div className="not-important">Not important</div>
 
         {/* <div class="area-done"> */}
-        <Area key={"doneArea"} areaKey={"doneArea"} data={areaList.doneArea} add={addTodo} remove={removeTodo} />
+        <Area key={"doneArea"} areaKey={"doneArea"} data={areaList.doneArea} add={addTodo} remove={removeTodo} change={changeTodo} />
         {/* </div> */}
       </DragDropContext>
     </div>

@@ -2,11 +2,8 @@
   background-color: var(--todo-area-color);
   display: flex;
   flex-direction: row;
-  justify-content: center;
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 5px;
-  text-align: center;
-  justify-content: space-between;
   align-items: center;
 }

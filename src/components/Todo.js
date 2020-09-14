@@ -1,11 +1,12 @@
 import React from 'react';
+import { Draggable } from 'react-beautiful-dnd';
+import Text from "./Text";
 
 import './Todo.css'
-import { Draggable } from 'react-beautiful-dnd';
 
 function Todo(props) {
   // TODO: Use hooks to NOT pass the "remove" props all the way down here
-  const { data, areaKey, index, remove } = props;
+  const { data, areaKey, index, remove, change } = props;
   
   return(
     <Draggable key={data.id} draggableId={data.id} index={index}>
@@ -16,7 +17,10 @@ function Todo(props) {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            {data.text}
+            <Text
+            text={data.text}
+            onSetText={text => change(areaKey, index, text)}
+           />
             <button onClick={() => remove(areaKey, index)}>X</button>
           </div>
       }
