@@ -94,9 +94,9 @@ function Text(props) {
       }  
     </span>
     { isInputActive ?  
-      <button onClick={handleSave}>Save</button>
+      <button className="action-button" onClick={handleSave}>S</button>
       :
-      <button onClick={handleEdit}>Edit</button>
+      <button className="action-button" onClick={handleEdit}>E</button>
     }
     
     </>

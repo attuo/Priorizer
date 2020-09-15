@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import usePersistedState from '../hooks/usePersistedState';
 import { DragDropContext } from 'react-beautiful-dnd';
-
 import { onDragEnd } from '../utils/drag';
 import { generateId } from '../utils/idgenerator';
+
 import Area from './Area';
 
 import './Platform.css';
 
 
 const createNewTodo = () => {
-  return { id: generateId(), text: "Test text"}
+  return { id: generateId(), text: ""}
 }
 
 const areasFromBackend = 
@@ -24,7 +25,7 @@ const areasFromBackend =
   },
   delegateArea: {
     name: "Delegate",
-    items: [ createNewTodo() ]
+    items: [ ]
   },
   eliminateArea: {
     name: "Eliminate",
@@ -37,9 +38,8 @@ const areasFromBackend =
 }
 
 
-
 function Platform() {
-  const [areaList, setAreaList] = useState(areasFromBackend);
+  const [areaList, setAreaList] = usePersistedState("areaList", areasFromBackend);
 
   const addTodo = (key) => {
     const newTodo = createNewTodo();
