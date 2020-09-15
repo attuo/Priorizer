@@ -19,12 +19,13 @@ function Text(props) {
 
 
   // Click outside
-  useOnClickOutside(wrapperRef, () => {
-    if (isInputActive) {
-      onSetText(inputValue);
-      setIsInputActive(false);
-    }
-  });
+  // useOnClickOutside(wrapperRef, () => {
+  //   console.log("Käy outside");
+  //   if (isInputActive) {
+  //     onSetText(inputValue);
+  //     setIsInputActive(false);
+  //   }
+  // });
 
   const onEnter = useCallback(() => {
     if (enter) {
@@ -68,13 +69,14 @@ function Text(props) {
   }
 
   const handleEdit = () => {
+    console.log("Käy täällä");
     // TODO: Fix EDIT bug
     setIsInputActive(true);
   }
 
   return (
     <>
-    <span className="inline-text" ref={wrapperRef}>
+    <span className="inline-text">
       { isInputActive ? 
         <input
           className="text-input"

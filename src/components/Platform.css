@@ -1,6 +1,6 @@
 .platform {
   display: grid;
-  grid-template-columns: 70px 350px 350px 350px;
+  grid-template-columns: 45px 350px 350px 350px;
   grid-template-rows: 45px 350px 350px;
   grid-template-areas:
     ".              urgent    not-urgent  ."
@@ -9,6 +9,39 @@
   grid-gap: 1px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .platform {
+    display: grid;
+    grid-template-columns: 45px 350px 350px;
+    grid-template-rows: 45px 350px 350px 350px;
+    grid-template-areas:
+      ".              urgent    not-urgent"
+      "important      do        schedule"
+      "not-important  delegate  eliminate"
+      ".              done      done";
+    grid-gap: 1px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .platform {
+    display: grid;
+    grid-template-columns: minmax(100px, 775px);
+    grid-template-rows: repeat(5, 350px) repeat(5, 100px);
+    grid-template-areas:
+      "do"
+      "schedule"
+      "delegate"
+      "eliminate"
+      "done"
+      "."
+      "important"
+      "not-important"
+      "urgent"
+      "not-urgent";
+    grid-gap: 1px;
+  }
+}
 
 .urgent {
   font-size: 22px;

@@ -54,5 +54,6 @@
 
 .done-area {
   grid-area: done;
+  background-color: #E0E0E0;
 }
 
