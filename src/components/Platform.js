@@ -25,7 +25,7 @@ const areasFromBackend =
   },
   delegateArea: {
     name: "Delegate",
-    items: [ ]
+    items: []
   },
   eliminateArea: {
     name: "Eliminate",
@@ -71,22 +71,18 @@ function Platform() {
 
   return (
     <div className="platform">
-      <DragDropContext onDragEnd={result => onDragEnd(result, areaList, setAreaList)}>
         
         <div className="urgent">Urgent</div>
         <div className="not-urgent">Not urgent</div>
-        
+        <div className="important">Important</div>
+        <div className="not-important">Not important</div>
+
+      <DragDropContext onDragEnd={result => onDragEnd(result, areaList, setAreaList)}>  
         <Area key={"doArea"} areaKey={"doArea"} data={areaList.doArea} add={addTodo} remove={removeTodo} change={changeTodo} />
         <Area key={"scheduleArea"} areaKey={"scheduleArea"} data={areaList.scheduleArea} add={addTodo} remove={removeTodo} change={changeTodo} />
         <Area key={"delegateArea"} areaKey={"delegateArea"} data={areaList.delegateArea} add={addTodo} remove={removeTodo} change={changeTodo} />
         <Area key={"eliminateArea"} areaKey={"eliminateArea"} data={areaList.eliminateArea} add={addTodo} remove={removeTodo} change={changeTodo} />
-
-        <div className="important">Important</div>
-        <div className="not-important">Not important</div>
-
-        {/* <div class="area-done"> */}
         <Area key={"doneArea"} areaKey={"doneArea"} data={areaList.doneArea} add={addTodo} remove={removeTodo} change={changeTodo} />
-        {/* </div> */}
       </DragDropContext>
     </div>
   )

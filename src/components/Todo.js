@@ -7,12 +7,13 @@ import './Todo.css'
 function Todo(props) {
   // TODO: Use hooks to NOT pass the "remove" props all the way down here
   const { data, areaKey, index, remove, change } = props;
-  
+  console.log("TODO renderöi: ", areaKey, index, data)
+
   return(
     <Draggable key={data.id} draggableId={data.id} index={index}>
       {(provided, snapshot) => 
           <div
-            className="todo"
+            className={`todo ${snapshot.isDragging ? "dragging" : ""}`}
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -21,7 +22,7 @@ function Todo(props) {
             text={data.text}
             onSetText={text => change(areaKey, index, text)}
            />
-            <button onClick={() => remove(areaKey, index)}>X</button>
+            <button className="action-button remove-button" onClick={() => remove(areaKey, index)}>X</button>
           </div>
       }
     </Draggable>

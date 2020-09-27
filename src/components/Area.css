@@ -5,12 +5,17 @@
   padding: 10px;
 }
 
+.dragging-over {
+  background-color: var(--todo-area-draggable-color);
+}
+
 .area-title {
   display: flex;
   flex-direction: row;
   padding: 5px;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 
 .title-text {
@@ -30,6 +35,7 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 5px;
 }
 
 .do-area {
@@ -56,4 +62,3 @@
   grid-area: done;
   background-color: #E0E0E0;
 }
-

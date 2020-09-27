@@ -49,6 +49,7 @@
   margin-bottom: 10px;
   grid-area: urgent;
   text-align: center;
+  user-select: none;
 }
 
 .not-urgent {
@@ -57,6 +58,7 @@
   margin-bottom: 10px;
   grid-area: not-urgent;
   text-align: center;
+  user-select: none;
 }
 
 .important {
@@ -67,6 +69,7 @@
   text-align: center;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  user-select: none;
 }
 
 .not-important {
@@ -77,5 +80,6 @@
   text-align: center;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  user-select: none;
 }
 

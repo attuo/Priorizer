@@ -5,6 +5,9 @@
   
   --area-title-color: blue;
   --todo-area-color: white;
+
+  --todo-area-draggable-color: #c9c5c5;
+  --todo-drag-color: #a7a7a7ea;
 }
 
 * {

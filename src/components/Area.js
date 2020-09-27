@@ -14,15 +14,15 @@ function Area(props) {
   );
 
   return (
-    <div key={areaKey} className={"area " + areaClassName + "-area"}>
+    <div key={areaKey} className={`area ${areaClassName}-area`}>
       <div className={"area-title"}>
         <h2 className="title-text">{data.name}</h2>
         <button onClick={() => add(areaKey)}>Add</button>
       </div>
       <div className={"area-content"}>
-      <Droppable  droppableId={areaKey} key={areaKey}>
+      <Droppable key={areaKey} droppableId={areaKey} >
         { (provided, snapshot) => (
-          <div className="area-droppable" {...provided.droppableProps} ref={provided.innerRef}>
+          <div className={`area-droppable ${snapshot.isDraggingOver ? "dragging-over" : ""}`} {...provided.droppableProps} ref={provided.innerRef}>
             {todos}
             {provided.placeholder}
           </div>
