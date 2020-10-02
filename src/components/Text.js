@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import useKeypress from "../hooks/useKeyPress";
 import useOnClickOutside from "../hooks/useOnClickOutside";
+import { Edit, CheckSquare } from 'react-feather';
 
 import './Text.css';
 
@@ -20,7 +21,6 @@ function Text(props) {
 
   // Click outside
   // useOnClickOutside(wrapperRef, () => {
-  //   console.log("Käy outside");
   //   if (isInputActive) {
   //     onSetText(inputValue);
   //     setIsInputActive(false);
@@ -69,8 +69,6 @@ function Text(props) {
   }
 
   const handleEdit = () => {
-    console.log("Käy täällä");
-    // TODO: Fix EDIT bug
     setIsInputActive(true);
   }
 
@@ -94,9 +92,9 @@ function Text(props) {
       }  
     </span>
     { isInputActive ?  
-      <button className="action-button save-button" onClick={handleSave}>S</button>
+      <button className="action-button save-button" onClick={handleSave}><CheckSquare/></button>
       :
-      <button className="action-button edit-button" onClick={handleEdit}>E</button>
+      <button className="action-button edit-button" onClick={handleEdit}><Edit/></button>
     }
     
     </>

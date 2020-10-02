@@ -1,5 +1,7 @@
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd';
+import { PlusSquare } from 'react-feather';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Todo from './Todo';
 
@@ -10,20 +12,24 @@ function Area(props) {
   const areaClassName = data.name.toLowerCase(); 
 
   const todos = data.items.map((item, index) =>
-    <Todo areaKey={areaKey} key={item.id} data={item} index={index} remove={remove} change={change}/>
+    <CSSTransition key={item.id} classNames="item" timeout={0}>
+      <Todo areaKey={areaKey} key={item.id} data={item} index={index} remove={remove} change={change}/>
+    </CSSTransition>
   );
 
   return (
     <div key={areaKey} className={`area ${areaClassName}-area`}>
       <div className={"area-title"}>
         <h2 className="title-text">{data.name}</h2>
-        <button onClick={() => add(areaKey)}>Add</button>
+        <button onClick={() => add(areaKey)}><PlusSquare/></button>
       </div>
       <div className={"area-content"}>
       <Droppable key={areaKey} droppableId={areaKey} >
         { (provided, snapshot) => (
           <div className={`area-droppable ${snapshot.isDraggingOver ? "dragging-over" : ""}`} {...provided.droppableProps} ref={provided.innerRef}>
-            {todos}
+            <TransitionGroup>
+              {todos}
+            </TransitionGroup>
             {provided.placeholder}
           </div>
         )}
