@@ -91,7 +91,7 @@ function Text(props) {
         </span>
       }  
     </span>
-    { isInputActive ?  
+    { isInputActive ?
       <button className="action-button save-button" onClick={handleSave}><CheckSquare/></button>
       :
       <button className="action-button edit-button" onClick={handleEdit}><Edit/></button>

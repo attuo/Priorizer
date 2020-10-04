@@ -14,7 +14,7 @@ function Todo(props) {
     <Draggable key={data.id} draggableId={data.id} index={index}>
       {(provided, snapshot) => 
           <div
-            className={`todo ${snapshot.isDragging ? "dragging" : ""}`}
+            className={"todo" + ((snapshot.isDragging) ? " dragging" : "")}
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}

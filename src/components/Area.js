@@ -26,7 +26,7 @@ function Area(props) {
       <div className={"area-content"}>
       <Droppable key={areaKey} droppableId={areaKey} >
         { (provided, snapshot) => (
-          <div className={`area-droppable ${snapshot.isDraggingOver ? "dragging-over" : ""}`} {...provided.droppableProps} ref={provided.innerRef}>
+          <div className={"area-droppable" + (snapshot.isDraggingOver ? " dragging-over" : "")} {...provided.droppableProps} ref={provided.innerRef}>
             <TransitionGroup component={null}>
               {todos}
             </TransitionGroup>

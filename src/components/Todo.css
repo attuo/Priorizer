@@ -6,11 +6,6 @@
   margin-bottom: 5px;
   padding: 5px;
   align-items: center;
-  transform: perspective(1px) translateZ(0);
-  animation-name: hvr-pop;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
 }
 
 /* .todo:hover {
@@ -26,10 +21,4 @@
 
 .dragging {
   background-color: var(--todo-drag-color);
-}
-
-@keyframes pop {
-  50% {
-    transform: scale(1.2);
-  }
 }
