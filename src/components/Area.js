@@ -12,7 +12,7 @@ function Area(props) {
   const areaClassName = data.name.toLowerCase(); 
 
   const todos = data.items.map((item, index) =>
-    <CSSTransition key={item.id} classNames="item" timeout={0}>
+    <CSSTransition key={item.id} classNames="item" timeout={300} exit={false}>
       <Todo areaKey={areaKey} key={item.id} data={item} index={index} remove={remove} change={change}/>
     </CSSTransition>
   );
@@ -27,7 +27,7 @@ function Area(props) {
       <Droppable key={areaKey} droppableId={areaKey} >
         { (provided, snapshot) => (
           <div className={`area-droppable ${snapshot.isDraggingOver ? "dragging-over" : ""}`} {...provided.droppableProps} ref={provided.innerRef}>
-            <TransitionGroup>
+            <TransitionGroup component={null}>
               {todos}
             </TransitionGroup>
             {provided.placeholder}

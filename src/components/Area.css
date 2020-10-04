@@ -63,17 +63,11 @@
   background-color: #E0E0E0;
 }
 
+
 .item-enter {
-  opacity: 0.5;
+  background-color: var(--todo-drag-color);
 }
 .item-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
+  background-color: var(--todo-area-color);
+  transition: 300ms ease-in;
 }
-/* .item-exit {
-  opacity: 1;
-}
-.item-exit-active {
-  opacity: 0;
-  transition: opacity 300ms ease-in;
-} */
