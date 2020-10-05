@@ -2,18 +2,12 @@
   background-color: var(--todo-area-color);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 5px;
   align-items: center;
 }
-
-/* .todo:hover {
-  animation-name: hvr-pop;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-} */
 
 .todo:hover button {
   visibility: visible;
@@ -21,4 +15,24 @@
 
 .dragging {
   background-color: var(--todo-drag-color);
+}
+
+.inline-text {
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.text-input {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  overflow-x: auto;
+}
+
+.action-button {
+  visibility: hidden;
+  margin-left: 2px;
+  margin-right: 2px;
 }
