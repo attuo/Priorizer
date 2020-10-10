@@ -1,9 +1,9 @@
 .todo {
-  background-color: var(--todo-area-color);
+  background-color: var(--todo-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   margin-bottom: 5px;
   padding: 5px;
   align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .active {
-  background-color: var(--todo-drag-color);
+  background-color: var(--todo-active-color);
 }
 
 .text-section {

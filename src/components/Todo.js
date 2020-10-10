@@ -99,7 +99,7 @@ function Todo(props) {
               </span>
             }  
           </div>
-          <div class="button-section">
+          <div className="button-section">
             { isInputActive ?
               <button className="action-button save-button" onClick={handleSave}><CheckSquare/></button>
             :

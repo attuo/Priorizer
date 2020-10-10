@@ -1,13 +1,21 @@
 :root {
   --main-text-color: black;
   --main-background-color: #fff;
-  --area-color: red;
   
   --area-title-color: blue;
-  --todo-area-color: white;
+  --area-color: white;
+  --area-active-color: #CCCCCC;
 
-  --todo-area-draggable-color: #c9c5c5;
-  --todo-drag-color: #a7a7a7ea;
+  --do-area-color: #fce5e3;
+  --schedule-area-color: #ebefeb;
+  --delegate-area-color: #fcf4eb;
+  --eliminate-area-color: #fff6e3;
+  --done-area-color: #E0E0E0;
+
+  --todo-color: #fff;
+  --todo-active-color: #E6E6E6;
+
+  --border-color: #000000
 }
 
 * {

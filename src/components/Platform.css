@@ -27,19 +27,17 @@
   .platform {
     display: grid;
     grid-template-columns: minmax(100px, 775px);
-    grid-template-rows: repeat(5, 350px) repeat(5, 100px);
+    grid-template-rows: repeat(5, 350px);
     grid-template-areas:
       "do"
       "schedule"
       "delegate"
       "eliminate"
-      "done"
-      "."
-      "important"
-      "not-important"
-      "urgent"
-      "not-urgent";
+      "done";
     grid-gap: 1px;
+  }
+  .label {
+    display: none;
   }
 }
 

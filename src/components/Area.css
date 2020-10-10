@@ -1,12 +1,12 @@
 .area {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   padding: 10px;
 }
 
 .dragging-over {
-  background-color: var(--todo-area-draggable-color);
+  background-color: var(--area-active-color);
 }
 
 .area-title {
@@ -33,41 +33,41 @@
 
 .area-droppable {
   height: 100%;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 5px;
 }
 
 .do-area {
   grid-area: do;
-  background-color: #fce5e3;
+  background-color: var(--do-area-color);
 }
 
 .schedule-area {
   grid-area: schedule;
-  background-color: #ebefeb;
+  background-color: var(--schedule-area-color);
 }
 
 .delegate-area {
   grid-area: delegate;
-  background-color: #fcf4eb;
+  background-color: var(--delegate-area-color);
 }
 
 .eliminate-area {
   grid-area: eliminate;
-  background-color: #fff6e3;
+  background-color: var(--eliminate-area-color);
 }
 
 .done-area {
   grid-area: done;
-  background-color: #E0E0E0;
+  background-color: var(--done-area-color);
 }
 
 
 .item-enter {
-  background-color: var(--todo-drag-color);
+  background-color: var(--todo-active-color);
 }
 .item-enter-active {
-  background-color: var(--todo-area-color);
+  background-color: var(--todo-active-color);
   transition: 300ms ease-in;
 }
