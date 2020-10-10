@@ -80,15 +80,14 @@ function Todo(props) {
     <Draggable key={data.id} draggableId={data.id} index={index}>
       {(provided, snapshot) => 
         <div
-          className={"todo" + ((snapshot.isDragging) ? " dragging" : "")}
+          className={`todo ${snapshot.isDragging ? " active" : ""} ${isInputActive ? " active": ""}`}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <div>
-            <span className="inline-text">
+          <div className="text-section">
             { isInputActive ? 
-              <input
+              <textarea
                 className="text-input"
                 ref={inputRef}
                 value={inputValue}
@@ -99,9 +98,8 @@ function Todo(props) {
                 {data.text}
               </span>
             }  
-            </span>
           </div>
-          <div>
+          <div class="button-section">
             { isInputActive ?
               <button className="action-button save-button" onClick={handleSave}><CheckSquare/></button>
             :
