@@ -24,17 +24,17 @@ function Area(props) {
         <button onClick={() => add(areaKey)}><PlusSquare/></button>
       </div>
       <div className={"area-content"}>
-      <Droppable key={areaKey} droppableId={areaKey} >
-        { (provided, snapshot) => (
-          <div className={"area-droppable" + (snapshot.isDraggingOver ? " dragging-over" : "")} {...provided.droppableProps} ref={provided.innerRef}>
-            <TransitionGroup component={null}>
-              {todos}
-            </TransitionGroup>
-            {provided.placeholder}
-          </div>
-        )}
-      </Droppable>
-</div>
+        <Droppable key={areaKey} droppableId={areaKey} >
+          { (provided, snapshot) => (
+            <div className={"area-droppable" + (snapshot.isDraggingOver ? " dragging-over" : "")} {...provided.droppableProps} ref={provided.innerRef}>
+              <TransitionGroup component={null}>
+                {todos}
+              </TransitionGroup>
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </div>
     </div>
   )
 }

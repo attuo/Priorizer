@@ -2,34 +2,21 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { Edit, CheckSquare, XSquare } from 'react-feather';
 import useKeypress from "../hooks/useKeyPress";
-import useOnClickOutside from "../hooks/useOnClickOutside";
 
 import './Todo.css'
 
 function Todo(props) {
 
-  // TODO: Use hooks to NOT pass the "remove" props all the way down here
   // TODO: Don't render all the changes all the time
   const { data, areaKey, index, remove, change } = props;
 
   const [isInputActive, setIsInputActive] = useState(false);
   const [inputValue, setInputValue] = useState(data.text);
 
-  const wrapperRef = useRef(null);
-  const textRef = useRef(null);
   const inputRef = useRef(null);
 
   const enter = useKeypress("Enter");
   const esc = useKeypress("Escape");
-
-
-  // Click outside
-  // useOnClickOutside(wrapperRef, () => {
-  //   if (isInputActive) {
-  //     onSetText(inputValue);
-  //     setIsInputActive(false);
-  //   }
-  // });
 
   const onEnter = useCallback(() => {
     if (enter) {
@@ -94,7 +81,7 @@ function Todo(props) {
                 onChange={handleInputChange}
               />
               :
-              <span className="text-input" ref={textRef}>
+              <span className="text-input">
                 {data.text}
               </span>
             }  
