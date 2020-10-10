@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/priorizer/static/css/main.37517b21.chunk.css",
-    "main.js": "/priorizer/static/js/main.006a6482.chunk.js",
-    "main.js.map": "/priorizer/static/js/main.006a6482.chunk.js.map",
+    "main.js": "/priorizer/static/js/main.1cd5871f.chunk.js",
+    "main.js.map": "/priorizer/static/js/main.1cd5871f.chunk.js.map",
     "runtime-main.js": "/priorizer/static/js/runtime-main.b603e9bc.js",
     "runtime-main.js.map": "/priorizer/static/js/runtime-main.b603e9bc.js.map",
     "static/js/2.4919eeba.chunk.js": "/priorizer/static/js/2.4919eeba.chunk.js",
     "static/js/2.4919eeba.chunk.js.map": "/priorizer/static/js/2.4919eeba.chunk.js.map",
     "index.html": "/priorizer/index.html",
-    "precache-manifest.9f5b074d7659121bac99f706866abf04.js": "/priorizer/precache-manifest.9f5b074d7659121bac99f706866abf04.js",
+    "precache-manifest.3adfce385b62eaed12d72ecdcfe9c2df.js": "/priorizer/precache-manifest.3adfce385b62eaed12d72ecdcfe9c2df.js",
     "service-worker.js": "/priorizer/service-worker.js",
     "static/css/main.37517b21.chunk.css.map": "/priorizer/static/css/main.37517b21.chunk.css.map",
     "static/js/2.4919eeba.chunk.js.LICENSE.txt": "/priorizer/static/js/2.4919eeba.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b603e9bc.js",
     "static/js/2.4919eeba.chunk.js",
     "static/css/main.37517b21.chunk.css",
-    "static/js/main.006a6482.chunk.js"
+    "static/js/main.1cd5871f.chunk.js"
   ]
 }
