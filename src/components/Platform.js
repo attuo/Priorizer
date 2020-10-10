@@ -1,5 +1,5 @@
 import React from 'react';
-import usePersistedState from '../hooks/usePersistedState';
+import useLocalStorageState from '../hooks/usePersistedState';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { onDragEnd } from '../utils/drag';
 import { generateId } from '../utils/idgenerator';
@@ -11,12 +11,11 @@ import './Platform.css';
 
 
 function Platform() {
-  const [areas, setAreas] = usePersistedState("areaList", initializeData);
+  const [areas, setAreas] = useLocalStorageState("areaList", initializeData());
 
   const addTodo = (key) => {
     const newTodo = { id: generateId(), text: ""}
     let area = areas[key];
-    console.log("")
     area.items.push(newTodo);
     // TODO: Need to change that only items array is set, not whole area object
     const newObj = { ...areas, [key]: area };
