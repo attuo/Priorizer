@@ -1,8 +1,8 @@
 # Priorizer App
 
 Application for priorizing daily tasks by using [Eisenhower Matrix](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method) made with [React](https://reactjs.org/)
-## ✨ [**Demo**](https://www.attuo.github.io/priorizer)
-
+ ### ✨ [Demo](https://www.attuo.github.io/priorizer)
+  
 ## 🤓 Motivation
 
 This is my little toy program for tinkering with React and trying out all kind of different concepts and libraries in the ever changing frontend world! I wanted to make something different than a typical Todo-list, so I created a just a little bit different Todo-list, the Eisenhower Matrix. You can read more about it from [here](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method) or [here](https://todoist.com/productivity-methods/eisenhower-matrix). 
