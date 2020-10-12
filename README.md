@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Priorizer App
 
-## Available Scripts
+Application for priorizing daily tasks by using [Eisenhower Matrix](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method) made with [React](https://reactjs.org/)
 
-In the project directory, you can run:
+## ✨[**Demo**](https://www.attuo.github.io/priorizer)
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🤓 Motivation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This is my little toy program for tinkering with React and trying out all kind of different concepts and libraries in the ever changing frontend world! I wanted to make something different than a typical Todo-list, so I created a just a little bit different Todo-list, the Eisenhower Matrix. You can read more about it from [here](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method) or [here](https://todoist.com/productivity-methods/eisenhower-matrix). 
 
-### `yarn test`
+## 🛠️ Technical details
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here is the list of concepts and libraries that I have used and what I'm about to test here someday.
 
-### `yarn build`
+Used libraries and concepts
+- [X] React
+- [X] Template ([create-react-app](https://github.com/facebook/create-react-app))
+- [X] Drag and Drop ([react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd))
+- [X] Icons ([feather](https://github.com/feathericons/react-feather))
+- [X] Animations ([transition-group](https://reactcommunity.org/react-transition-group/))
+- [X] Local Storage saving
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Still work in progress
+- [ ] Transition to TypeScript
+- [ ] Transition to Sass or css-in-js
+- [ ] Tests with Jest
+- [ ] Overall UI overhaul
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Might add someday
+- [ ] More permanent storage than browser's local storage (for example with [FileSystem API](https://developer.mozilla.org/en-US/docs/Web/API/FileSystem) or some Cloud storage integration)
+- [ ] Smoother and better animations
+- [ ] Better accessibility (for example keyboard support)
+- [ ] Optimizations here and there
+- [ ] Overall code structure improvements
+- [ ] PWA functionalities
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Usage
 
-### `yarn eject`
+*  Option 1. Use it straight from the website (tasks are saved only to your browser's local storage)
+*  Option 2. Use and run it locally
+   *  > git clone https://github.com/attuo/priorizer.git
+   *  > yarn install / npm install
+   *  > yarn start / npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 📝 License
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed - So feel free to use it anyway you like. 🙂
