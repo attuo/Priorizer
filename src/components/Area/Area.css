@@ -1,0 +1,33 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+.do-area {
+  grid-area: do;
+  background-color: var(--do-area-color);
+}
+
+.schedule-area {
+  grid-area: schedule;
+  background-color: var(--schedule-area-color);
+}
+
+.delegate-area {
+  grid-area: delegate;
+  background-color: var(--delegate-area-color);
+}
+
+.eliminate-area {
+  grid-area: eliminate;
+  background-color: var(--eliminate-area-color);
+}
+
+.done-area {
+  grid-area: done;
+  background-color: var(--done-area-color);
+}
+
+

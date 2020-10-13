@@ -1,0 +1,27 @@
+.area-content {
+  display: flex;
+  padding: 5px;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.area-droppable {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 5px;
+}
+
+.dragging-over {
+  background-color: var(--area-active-color);
+}
+
+.item-enter {
+  background-color: var(--todo-active-color);
+}
+.item-enter-active {
+  background-color: var(--todo-active-color);
+  transition: 300ms ease-in;
+}

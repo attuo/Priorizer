@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { Edit, CheckSquare, XSquare } from 'react-feather';
-import useKeypress from "../hooks/useKeyPress";
+import useKeypress from "../../hooks/useKeyPress";
 
 import './Todo.css'
 
 function Todo(props) {
-
   // TODO: Don't render all the changes all the time
-  const { data, areaKey, index, remove, change } = props;
+  const { data, areaKey, index, change, remove } = props;
 
   const [isInputActive, setIsInputActive] = useState(false);
   const [inputValue, setInputValue] = useState(data.text);

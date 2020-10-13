@@ -1,5 +1,5 @@
 import React from 'react';
-import Platform from './components/Platform'
+import Platform from '../Platform/Platform'
 
 import './App.css';
 

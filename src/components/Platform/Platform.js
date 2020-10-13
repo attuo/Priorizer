@@ -1,11 +1,11 @@
 import React from 'react';
-import useLocalStorageState from '../hooks/usePersistedState';
 import { DragDropContext } from 'react-beautiful-dnd';
-import { onDragEnd } from '../utils/drag';
-import { generateId } from '../utils/idgenerator';
-import { initializeData } from '../utils/initData';
+import { onDragEnd } from '../../utils/drag';
+import { generateId } from '../../utils/idgenerator';
+import { initializeData } from '../../utils/initData';
+import useLocalStorageState from '../../hooks/usePersistedState';
 
-import Area from './Area';
+import Area from '../Area/Area';
 
 import './Platform.css';
 
