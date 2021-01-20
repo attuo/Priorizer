@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-background-color);
 }
 
 @media only screen and (min-width: 775px) {
