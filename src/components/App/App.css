@@ -3,3 +3,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (min-width: 775px) {
+  .App {
+    height: 100vh;
+  }
+}

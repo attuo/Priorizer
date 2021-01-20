@@ -21,9 +21,11 @@ Used libraries and concepts
 
 Still work in progress
 - [ ] Transition to TypeScript
-- [ ] Transition to Sass or css-in-js
+- [ ] Transition to css-in-js (Styled Components)
 - [ ] Tests with Jest
 - [ ] Overall UI overhaul
+- [ ] Every px values to em/rem
+- [ ] Better responsiveness (mobile first)
 
 Might add someday
 - [ ] More permanent storage than browser's local storage (for example with [FileSystem API](https://developer.mozilla.org/en-US/docs/Web/API/FileSystem) or some Cloud storage integration)

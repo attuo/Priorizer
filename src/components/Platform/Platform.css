@@ -3,10 +3,11 @@
   grid-template-columns: 45px 350px 350px 350px;
   grid-template-rows: 45px 350px 350px;
   grid-template-areas:
-    ".              urgent    not-urgent  ."
-    "important      do        schedule    done"
-    "not-important  delegate  eliminate   done";
-  grid-gap: 1px;
+  ".              urgent    not-urgent  ."
+  "important      do        schedule    done"
+  "not-important  delegate  eliminate   done";
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fdfdfd;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -19,7 +20,6 @@
       "important      do        schedule"
       "not-important  delegate  eliminate"
       ".              done      done";
-    grid-gap: 1px;
   }
 }
 
@@ -34,7 +34,6 @@
       "delegate"
       "eliminate"
       "done";
-    grid-gap: 1px;
   }
   .label {
     display: none;
@@ -65,7 +64,7 @@
   margin-right: 10px;
   grid-area: important;
   text-align: center;
-  writing-mode: vertical-rl;
+  writing-mode: sideways-lr;
   text-orientation: upright;
   user-select: none;
 }
@@ -76,7 +75,7 @@
   margin-right: 10px;
   grid-area: not-important;
   text-align: center;
-  writing-mode: vertical-rl;
+  writing-mode: sideways-lr;
   text-orientation: upright;
   user-select: none;
 }

@@ -1,9 +1,9 @@
 :root {
-  --main-text-color: black;
-  --main-background-color: #fff;
+  --main-text-color: #000;
+  --main-background-color: #ececec;
   
-  --area-title-color: blue;
-  --area-color: white;
+  --area-title-color: #0000ff;
+  --area-color: #fff;
   --area-active-color: #CCCCCC;
 
   --do-area-color: #fce5e3;
