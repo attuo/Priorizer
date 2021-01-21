@@ -1,7 +1,7 @@
 # Priorizer App
 
 Application for priorizing daily tasks by using [Eisenhower Matrix](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method) made with [React](https://reactjs.org/)
- ### ✨ [Demo](https://attuo.github.io/priorizer)
+ ### ✨ [Demo](https://attuo.github.io/Priorizer/)
   
 ## Motivation
 
