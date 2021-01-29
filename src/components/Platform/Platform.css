@@ -64,8 +64,8 @@
   margin-right: 10px;
   grid-area: important;
   text-align: center;
-  writing-mode: sideways-lr;
-  text-orientation: upright;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   user-select: none;
 }
 
@@ -75,8 +75,8 @@
   margin-right: 10px;
   grid-area: not-important;
   text-align: center;
-  writing-mode: sideways-lr;
-  text-orientation: upright;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   user-select: none;
 }
 
